@@ -139,6 +139,9 @@ keycloak:
   defaultVersion: "24.7.3"
   chartRepository: "https://charts.bitnami.com/bitnami"
   valuesObject:
+    global:
+      security:
+        allowInsecureImages: true
     image:
       registry: docker.io
       repository: bitnamilegacy/keycloak
