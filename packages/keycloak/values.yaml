@@ -22,6 +22,13 @@ ingress:
   tls: false
 
 postgresql:
+  image:
+    registry: docker.io
+    repository: bitnamilegacy/postgresql
+  volumePermissions:
+    image:
+      registry: docker.io
+      repository: bitnamilegacy/os-shell
   enabled: true
   auth:
     username: keycloak
