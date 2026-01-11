@@ -157,7 +157,8 @@ keycloak:
       image:
         registry: docker.io
         repository: bitnamilegacy/keycloak-metrics
-    httpRelativePath: '/{{ if eq .metadata.labels.path_routing "true" }}keycloak/{{ end }}'
+    httpRelativePath: '/keycloak/'
+    #    httpRelativePath: '/{{ if eq .metadata.labels.path_routing "true" }}keycloak/{{ end }}'
     ingress:
       hostname: '{{ if eq .metadata.labels.path_routing "false" }}keycloak.{{ .metadata.annotations.domain }}{{ else }}{{ .metadata.annotations.domain }}{{ end }}'
       annotations: 
