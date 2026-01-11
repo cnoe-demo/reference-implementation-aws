@@ -136,6 +136,7 @@ keycloak:
   chartName: keycloak
   namespace: keycloak
   releaseName: keycloak
+  defaultVersion: "24.7.3"
   chartRepository: "https://charts.bitnami.com/bitnami"
   valuesObject:
     global:
@@ -148,10 +149,7 @@ keycloak:
     image:
       registry: docker.io
       repository: bitnamilegacy/keycloak
-      tag: 26.3.3-debian-12-r0
-    extraEnvVars:
-      - name: KC_CACHE
-        value: local
+      tag: 24.0.5-debian-12-r3
     volumePermissions:
       image:
         registry: docker.io
