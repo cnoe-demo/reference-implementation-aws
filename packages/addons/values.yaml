@@ -146,6 +146,10 @@ keycloak:
       image:
         registry: docker.io
         repository: bitnamilegacy/postgresql
+      volumePermissions:
+        image:
+          registry: docker.io
+          repository: bitnamilegacy/os-shell
     image:
       registry: docker.io
       repository: bitnamilegacy/keycloak
