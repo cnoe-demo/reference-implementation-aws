@@ -142,6 +142,10 @@ keycloak:
     global:
       security:
         allowInsecureImages: true
+    postgresql:
+      image:
+        registry: docker.io
+        repository: bitnamilegacy/postgresql
     image:
       registry: docker.io
       repository: bitnamilegacy/keycloak
