@@ -253,7 +253,8 @@ spec:
               #! /bin/bash
               set -ex -o pipefail
               apt -qq update && apt -qq install curl jq gettext-base -y
-              
+              echo ${KEYCLOAK_URL}
+              echo MARKER-DEBUG
               # Define helper functions
               keycloak_post() {
                 local endpoint=$1
