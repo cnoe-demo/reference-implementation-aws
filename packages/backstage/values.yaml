@@ -120,6 +120,13 @@ backstage:
     argoWorkflows:
       baseUrl: ${ARGO_WORKFLOWS_URL}
 postgresql:
+  image:
+    registry: docker.io
+    repository: bitnamilegacy/postgresql
+  volumePermissions:
+    image:
+      registry: docker.io
+      repository: bitnamilegacy/os-shell
   enabled: true
   auth:
     username: "backstage"
