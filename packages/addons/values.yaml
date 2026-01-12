@@ -142,6 +142,13 @@ keycloak:
     global:
       security:
         allowInsecureImages: true
+    resources:
+      requests:
+        cpu: "1"
+        memory: "1Gi"
+      limits:
+        cpu: "2"
+        memory: "2Gi"
     postgresql:
       image.registry: docker.io
       image.repository: bitnamilegacy/postgresql
