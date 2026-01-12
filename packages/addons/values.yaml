@@ -6,6 +6,13 @@ argocd:
   defaultVersion: "8.0.14"
   chartRepository: "https://argoproj.github.io/argo-helm"
   valuesObject:
+    resources:
+      requests:
+        cpu: "2"
+        memory: "2Gi"
+      limits:
+        cpu: "4"
+        memory: "4Gi"
     cnoe_ref_impl: # Specific values for reference CNOE implementation to control extraObjects.
       auto_mode: '{{ if eq .metadata.labels.auto_mode "true" }}true{{ else }}false{{ end }}'
     global:
