@@ -210,7 +210,7 @@ backstage:
               target: '{{ .metadata.annotations.addons_repo_url }}/blob/{{ .metadata.annotations.addons_repo_revision }}/templates/backstage/catalog-info.yaml'
       extraEnvVars:
       - name: DEBUG
-        value: "octokit:*"
+        value: "backstage:*,scaffolder-backend:*"
       - name: BACKSTAGE_FRONTEND_URL
         value: 'https://{{ if eq .metadata.labels.path_routing "false" }}backstage.{{ .metadata.annotations.domain }}{{ else }}{{ .metadata.annotations.domain }}{{ end }}'
       - name: KEYCLOAK_NAME_METADATA
