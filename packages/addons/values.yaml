@@ -204,6 +204,9 @@ backstage:
         cert-manager.io/cluster-issuer: '{{ if eq .metadata.labels.path_routing "false" }}letsencrypt-prod{{ end }}'
     backstage:
       appConfig:
+        backend:
+          logging:
+            level: debug
         catalog:
           locations:
             - type: url
