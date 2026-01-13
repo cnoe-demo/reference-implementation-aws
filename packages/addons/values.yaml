@@ -171,8 +171,8 @@ keycloak:
       image:
         registry: docker.io
         repository: bitnamilegacy/keycloak-metrics
-    # httpRelativePath: '/keycloak/'
-    httpRelativePath: '/{{ if eq .metadata.labels.path_routing "true" }}keycloak/{{ end }}'
+    httpRelativePath: '/keycloak/'
+    #httpRelativePath: '/{{ if eq .metadata.labels.path_routing "true" }}keycloak/{{ end }}'
     ingress:
       hostname: '{{ if eq .metadata.labels.path_routing "false" }}keycloak.{{ .metadata.annotations.domain }}{{ else }}{{ .metadata.annotations.domain }}{{ end }}'
       annotations: 
@@ -212,7 +212,8 @@ backstage:
       - name: BACKSTAGE_FRONTEND_URL
         value: 'https://{{ if eq .metadata.labels.path_routing "false" }}backstage.{{ .metadata.annotations.domain }}{{ else }}{{ .metadata.annotations.domain }}{{ end }}'
       - name: KEYCLOAK_NAME_METADATA
-        value: 'https://{{ if eq .metadata.labels.path_routing "false" }}keycloak.{{ .metadata.annotations.domain }}{{ else }}{{ .metadata.annotations.domain }}/keycloak{{ end }}/realms/cnoe/.well-known/openid-configuration'
+        value: 'https://keycloak.{{ .metadata.annotations.domain }}/keycloak/realms/cnoe/.well-known/openid-configuration'      
+        #value: 'https://{{ if eq .metadata.labels.path_routing "false" }}keycloak.{{ .metadata.annotations.domain }}{{ else }}{{ .metadata.annotations.domain }}/keycloak{{ end }}/realms/cnoe/.well-known/openid-configuration'
       - name: ARGO_WORKFLOWS_URL
         value: 'https://{{ if eq .metadata.labels.path_routing "false" }}argo-workflows.{{ .metadata.annotations.domain }}{{ else }}{{ .metadata.annotations.domain }}/argo-workflows{{ end }}'
       - name: ARGO_CD_URL
