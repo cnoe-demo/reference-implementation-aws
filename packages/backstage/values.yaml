@@ -71,7 +71,7 @@ backstage:
         headers:
           Authorization:
             $env: ARGO_WORKFLOWS_AUTH_TOKEN
-      '/argocd':
+      '/argocd/api':
         #target: ${ARGO_CD_URL}
         #target: 'https://argocd.cis-italy.net'
         #target: 'https://argocd.cis-italy.net/api/v1'
