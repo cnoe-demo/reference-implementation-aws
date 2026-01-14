@@ -73,10 +73,10 @@ backstage:
             $env: ARGO_WORKFLOWS_AUTH_TOKEN
       '/argocd':
         #target: ${ARGO_CD_URL}
-        target: 'https://argocd.cis-italy.net'
+        #target: 'https://argocd.cis-italy.net'
         #target: 'https://argocd.cis-italy.net/api/v1'
-        #target: http://argocd-server.argocd.svc.cluster.local
-        secure: true
+        target: http://argocd-server.argocd.svc.cluster.local
+        secure: false
         changeOrigin: true
         headers:
           Cookie:
