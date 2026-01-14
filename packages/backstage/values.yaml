@@ -12,8 +12,8 @@ backstage:
   image:
     registry: ghcr.io
     repository: cnoe-io/backstage-app
-    tag: 135c0cb26f3e004a27a11edb6a4779035aff9805
-    pullPolicy: IfNotPresent
+    tag: latest
+    pullPolicy: Always
   command: ["node", "packages/backend"]
   extraEnvVarsSecrets:
     - backstage-env-vars
@@ -72,8 +72,8 @@ backstage:
           Authorization:
             $env: ARGO_WORKFLOWS_AUTH_TOKEN
       '/argocd/api':
-        target: 'https://argocd.cis-italy.net/api/v1'
-        #target: ${ARGO_CD_URL}
+        #target: 'https://argocd.cis-italy.net/api/v1'
+        target: ${ARGO_CD_URL}
         changeOrigin: true
         headers:
           Cookie:
