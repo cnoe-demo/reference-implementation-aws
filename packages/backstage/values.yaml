@@ -12,7 +12,7 @@ backstage:
   image:
     registry: ghcr.io
     repository: cnoe-io/backstage-app
-    tag: 609287b5491fd0b2643e99934c5af5ab1300b746
+    tag: sha256-6dc5b406135a6dd5d9cbee74e6a8692f12149eaa4164654ec520152a5fffc4d6
     pullPolicy: Always
   command: ["node", "packages/backend"]
   extraEnvVarsSecrets:
