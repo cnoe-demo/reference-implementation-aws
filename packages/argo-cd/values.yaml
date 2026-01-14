@@ -139,6 +139,12 @@ configs:
     policy.csv: |
       g, superuser, role:admin
       g, backstage, role:readonly
+      p, role:backstage, applications, get, */*, allow
+      p, role:backstage, applications, list, */*, allow
+      p, role:backstage, applications, create, */*, allow
+      p, role:backstage, applications, update, */*, allow
+      p, role:backstage, applications, delete, */*, allow
+      p, role:backstage, applications, sync, */*, allow
 
 extraObjects:
 - |
