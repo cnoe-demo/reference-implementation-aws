@@ -1,5 +1,5 @@
 argocd:
-  enabled: false
+  enabled: true
   chartName: argo-cd
   namespace: argocd
   releaseName: argocd
