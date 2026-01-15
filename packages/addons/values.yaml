@@ -139,7 +139,7 @@ cert-manager:
         values: ['control-plane']
         
 keycloak:
-  enabled: true
+  enabled: false
   chartName: keycloak
   namespace: keycloak
   releaseName: keycloak
