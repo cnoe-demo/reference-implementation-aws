@@ -1,11 +1,11 @@
 valueFiles:
   - "values.yaml"
 
-syncPolicy:
-  automated:
-    selfHeal: false
-    allowEmpty: true
-    prune: false
+syncPolicy: {}
+  #automated:
+    #selfHeal: false
+    #allowEmpty: true
+    #prune: false
   retry:
     limit: -1 # number of failed sync attempt retries; unlimited number of attempts if less than 0
     backoff:
