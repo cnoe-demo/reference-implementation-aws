@@ -304,10 +304,11 @@ crossplane-compositions:
         values: ['control-plane']
 
 syncPolicy:
-  automated:
-    selfHeal: true
-    allowEmpty: true
-    prune: false
+  applicationsSync: create-only
+  # automated:
+  #   selfHeal: true
+  #   allowEmpty: true
+  #   prune: false
 
 syncPolicyAppSet:
   preserveResourcesOnDeletion: false # Set to false so that cleanup script removes all the deployed resources
