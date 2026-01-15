@@ -1,8 +1,8 @@
 valueFiles:
   - "values.yaml"
 
-#syncPolicy: {}
-  #automated:
+syncPolicy: {}
+  automated: false
     #selfHeal: false
     #allowEmpty: true
     #prune: false
